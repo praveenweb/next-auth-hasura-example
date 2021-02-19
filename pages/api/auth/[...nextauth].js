@@ -52,7 +52,7 @@ export default NextAuth({
     // if you want to override the default behaviour.
     encode: async ({ secret, token, maxAge }) => {
       const jwtClaims = {
-        "sub": token.id.toString() ,
+        "sub": token.sub.toString() ,
         "name": token.name ,
         "email": token.email,
         "iat": Date.now() / 1000,
